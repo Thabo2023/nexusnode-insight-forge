@@ -12,7 +12,7 @@ const Services = () => {
         "Pattern Recognition",
         "Performance Metrics"
       ],
-      icon: "📊"
+      icon: "analytics"
     },
     {
       title: "Market Research",
@@ -23,7 +23,7 @@ const Services = () => {
         "Consumer Insights",
         "Trend Forecasting"
       ],
-      icon: "🎯"
+      icon: "target"
     },
     {
       title: "Predictive Modeling",
@@ -34,13 +34,20 @@ const Services = () => {
         "Demand Planning",
         "Scenario Analysis"
       ],
-      icon: "🔮"
+      icon: "prediction"
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section id="services" className="py-20 bg-muted/30 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 20% 80%, hsl(var(--primary)) 0%, transparent 50%),
+                           radial-gradient(circle at 80% 20%, hsl(var(--accent)) 0%, transparent 50%)`
+        }}></div>
+      </div>
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our <span className="bg-gradient-tech bg-clip-text text-transparent">Services</span>
@@ -59,10 +66,10 @@ const Services = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <CardHeader className="text-center">
-                <div className="text-5xl mb-4 group-hover:animate-float">
-                  {service.icon}
+                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className="w-8 h-8 bg-primary-foreground rounded opacity-80"></div>
                 </div>
-                <CardTitle className="text-2xl font-bold text-foreground">
+                <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
@@ -83,8 +90,8 @@ const Services = () => {
                   </ul>
                 </div>
 
-                <Button variant="outline" className="w-full group-hover:shadow-tech">
-                  Learn More
+                <Button variant="premium" className="w-full group-hover:shadow-elegant">
+                  Explore Service
                 </Button>
               </CardContent>
             </Card>

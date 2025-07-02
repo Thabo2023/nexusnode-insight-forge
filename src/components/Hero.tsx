@@ -24,7 +24,17 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+          {/* Large Logo */}
+          <div className="mb-8 animate-fade-in">
+            <h1 className="text-8xl md:text-9xl font-bold bg-gradient-tech bg-clip-text text-transparent tracking-tight">
+              NEXUSNODE
+            </h1>
+            <div className="text-lg md:text-xl text-muted-foreground mt-2 tracking-widest">
+              DATA ANALYTICS & MARKET RESEARCH
+            </div>
+          </div>
+          
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
             Transform{" "}
             <span className="bg-gradient-tech bg-clip-text text-transparent">
               Data
@@ -33,7 +43,7 @@ const Hero = () => {
             <span className="bg-gradient-accent bg-clip-text text-transparent">
               Strategic Insights
             </span>
-          </h1>
+          </h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-slide-up max-w-3xl mx-auto">
             Nexusnode empowers businesses with precision-driven data analytics, 

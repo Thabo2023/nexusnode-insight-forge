@@ -1,11 +1,15 @@
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 const Partners = () => {
   const partners = [
-    { name: "TechCorp Solutions", industry: "Technology" },
-    { name: "RetailMax", industry: "Retail" },
-    { name: "FinanceFirst", industry: "Financial Services" },
-    { name: "HealthcarePlus", industry: "Healthcare" },
-    { name: "ManufactureCore", industry: "Manufacturing" },
-    { name: "EduTech Institute", industry: "Education" }
+    { name: "TechCorp Solutions", industry: "Technology", logo: "TC", color: "bg-gradient-primary" },
+    { name: "RetailMax", industry: "Retail", logo: "RM", color: "bg-gradient-accent" },
+    { name: "FinanceFirst", industry: "Financial Services", logo: "FF", color: "bg-gradient-tech" },
+    { name: "HealthcarePlus", industry: "Healthcare", logo: "HP", color: "bg-gradient-primary" },
+    { name: "ManufactureCore", industry: "Manufacturing", logo: "MC", color: "bg-gradient-accent" },
+    { name: "EduTech Institute", industry: "Education", logo: "EI", color: "bg-gradient-tech" },
+    { name: "DataFlow Systems", industry: "Technology", logo: "DS", color: "bg-gradient-primary" },
+    { name: "Analytics Pro", industry: "Consulting", logo: "AP", color: "bg-gradient-accent" }
   ];
 
   return (
@@ -21,55 +25,61 @@ const Partners = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {partners.map((partner, index) => (
-            <div 
-              key={partner.name}
-              className="group text-center space-y-4 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="aspect-square bg-gradient-subtle rounded-lg flex items-center justify-center border border-border/50 group-hover:border-primary/30 transition-all duration-300 group-hover:shadow-tech">
-                <div className="w-12 h-12 bg-gradient-tech rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">
-                    {partner.name.charAt(0)}
-                  </span>
+        <Carousel className="w-full max-w-6xl mx-auto" opts={{ align: "start", loop: true }}>
+          <CarouselContent className="-ml-4">
+            {partners.map((partner, index) => (
+              <CarouselItem key={partner.name} className="pl-4 md:basis-1/3 lg:basis-1/4">
+                <div className="group text-center space-y-4 animate-fade-in p-6 bg-card rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-tech hover:scale-105">
+                  <div className="aspect-square bg-gradient-subtle rounded-xl flex items-center justify-center border border-border/30 group-hover:border-primary/40 transition-all duration-300">
+                    <div className={`w-16 h-16 ${partner.color} rounded-full flex items-center justify-center shadow-lg`}>
+                      <span className="text-primary-foreground font-bold text-xl">
+                        {partner.logo}
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground text-base mb-1">
+                      {partner.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {partner.industry}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground text-sm">
-                  {partner.name}
-                </h3>
-                <p className="text-xs text-muted-foreground">
-                  {partner.industry}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-4" />
+          <CarouselNext className="right-4" />
+        </Carousel>
 
         {/* Partnership Benefits */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center space-y-4">
-            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
-              <span className="text-2xl">🤝</span>
+          <div className="text-center space-y-4 group">
+            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+              <div className="w-8 h-8 border-2 border-primary-foreground rounded-sm"></div>
             </div>
             <h3 className="text-xl font-semibold">Strategic Collaboration</h3>
             <p className="text-muted-foreground">
               Deep partnerships that go beyond traditional vendor relationships.
             </p>
           </div>
-          <div className="text-center space-y-4">
-            <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto">
-              <span className="text-2xl">💡</span>
+          <div className="text-center space-y-4 group">
+            <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+              <div className="w-8 h-8 bg-accent-foreground rounded-full relative">
+                <div className="absolute inset-2 bg-accent rounded-full"></div>
+              </div>
             </div>
             <h3 className="text-xl font-semibold">Innovation Focus</h3>
             <p className="text-muted-foreground">
               Collaborative innovation to solve complex business challenges.
             </p>
           </div>
-          <div className="text-center space-y-4">
-            <div className="w-16 h-16 bg-gradient-tech rounded-full flex items-center justify-center mx-auto">
-              <span className="text-2xl">📈</span>
+          <div className="text-center space-y-4 group">
+            <div className="w-16 h-16 bg-gradient-tech rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+              <div className="w-8 h-2 bg-primary-foreground transform rotate-12 relative">
+                <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-primary-foreground transform rotate-45"></div>
+              </div>
             </div>
             <h3 className="text-xl font-semibold">Mutual Growth</h3>
             <p className="text-muted-foreground">
