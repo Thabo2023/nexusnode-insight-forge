@@ -1,0 +1,114 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+const Team = () => {
+  const teamMembers = [
+    {
+      name: "Dr. Sarah Johnson",
+      role: "Chief Data Scientist",
+      linkedin: "https://linkedin.com/in/sarah-johnson-data",
+      bio: "Leading expert in machine learning and predictive analytics with 15+ years experience.",
+      initials: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Senior Market Research Analyst",
+      linkedin: "https://linkedin.com/in/michael-chen-market",
+      bio: "Specialized in consumer behavior analysis and market trend forecasting.",
+      initials: "MC"
+    },
+    {
+      name: "Dr. Amanda Rodriguez",
+      role: "Statistical Modeling Lead",
+      linkedin: "https://linkedin.com/in/amanda-rodriguez-stats",
+      bio: "PhD in Statistics with expertise in advanced statistical modeling and data visualization.",
+      initials: "AR"
+    },
+    {
+      name: "David Kim",
+      role: "Business Intelligence Director",
+      linkedin: "https://linkedin.com/in/david-kim-bi",
+      bio: "Transforms complex data into strategic business insights for executive decision-making.",
+      initials: "DK"
+    }
+  ];
+
+  return (
+    <section id="team" className="py-20 bg-muted/30">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Meet Our <span className="bg-gradient-tech bg-clip-text text-transparent">Expert Team</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Our team of data scientists, analysts, and researchers brings decades 
+            of combined experience in transforming data into actionable insights.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {teamMembers.map((member, index) => (
+            <Card 
+              key={member.name}
+              className="group hover:shadow-glow transition-all duration-500 hover:scale-105 border-border/50 bg-card/80 backdrop-blur-sm text-center"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardContent className="pt-8 space-y-4">
+                {/* Avatar */}
+                <div className="relative mx-auto w-24 h-24 bg-gradient-tech rounded-full flex items-center justify-center group-hover:animate-glow-pulse">
+                  <span className="text-2xl font-bold text-primary-foreground">
+                    {member.initials}
+                  </span>
+                </div>
+
+                {/* Name and Role */}
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary font-semibold mb-3">
+                    {member.role}
+                  </p>
+                </div>
+
+                {/* Bio */}
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {member.bio}
+                </p>
+
+                {/* LinkedIn Button */}
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full group-hover:shadow-tech"
+                  onClick={() => window.open(member.linkedin, '_blank')}
+                >
+                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                  Connect
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Join Team CTA */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-subtle rounded-2xl p-8 border border-border/50">
+            <h3 className="text-2xl font-bold mb-4">Join Our Growing Team</h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              We're always looking for talented individuals who are passionate about 
+              data analytics and want to make a real impact. Check out our open positions.
+            </p>
+            <Button variant="hero" size="lg">
+              View Open Positions
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Team;
