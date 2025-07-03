@@ -29,11 +29,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/b410b5d7-b6b7-484c-ba33-cf086ec5c70a.png" 
-                alt="Nexusnode Logo" 
-                className="h-12 w-auto"
-              />
+              <img src="/lovable-uploads/b410b5d7-b6b7-484c-ba33-cf086ec5c70a.png" alt="Nexusnode Logo" className="h-12 w-auto object-scale-down" />
             </Link>
           </div>
 
