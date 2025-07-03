@@ -23,8 +23,14 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Modern Geometric Logo */}
-          
+          {/* Large Logo */}
+          <div className="mb-8 animate-fade-in">
+            <img 
+              src="/lovable-uploads/b410b5d7-b6b7-484c-ba33-cf086ec5c70a.png" 
+              alt="Nexusnode Logo" 
+              className="h-32 md:h-40 w-auto mx-auto object-scale-down"
+            />
+          </div>
           
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
             Transform{" "}

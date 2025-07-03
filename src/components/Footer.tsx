@@ -42,15 +42,12 @@ const Footer = () => {
             </p>
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
-                <span>📍</span>
                 <span>Bresler Street, Nigel, Gauteng</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span>📞</span>
                 <span>073 936 8360</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span>✉️</span>
                 <span>info@nexusnode.co.za</span>
               </div>
             </div>

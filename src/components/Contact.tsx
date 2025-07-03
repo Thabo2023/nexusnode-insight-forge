@@ -23,7 +23,7 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl">📞</span>
+                    <div className="w-6 h-6 rounded border-2 border-white"></div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Phone</h4>
@@ -33,7 +33,7 @@ const Contact = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl">📍</span>
+                    <div className="w-6 h-6 border-2 border-white transform rotate-45"></div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Address</h4>
@@ -47,7 +47,7 @@ const Contact = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-tech rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl">✉️</span>
+                    <div className="w-6 h-4 border-2 border-white rounded-sm"></div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Email</h4>
@@ -57,7 +57,9 @@ const Contact = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl">🕒</span>
+                    <div className="w-6 h-6 border-2 border-white rounded-full relative">
+                      <div className="absolute top-1 left-1/2 w-0.5 h-2 bg-white transform -translate-x-1/2"></div>
+                    </div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Business Hours</h4>
@@ -76,13 +78,13 @@ const Contact = () => {
               <h4 className="text-lg font-semibold">Quick Actions</h4>
               <div className="space-y-3">
                 <Button variant="outline" className="w-full justify-start" size="lg">
-                  📞 Call Us Now
+                  Call Us Now
                 </Button>
                 <Button variant="outline" className="w-full justify-start" size="lg">
-                  📧 Send Email
+                  Send Email
                 </Button>
                 <Button variant="outline" className="w-full justify-start" size="lg">
-                  📅 Schedule Consultation
+                  Schedule Consultation
                 </Button>
               </div>
             </div>

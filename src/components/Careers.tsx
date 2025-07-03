@@ -107,9 +107,9 @@ const Careers = () => {
                         {position.title}
                       </CardTitle>
                       <div className="flex flex-wrap gap-4 mt-2 text-sm text-muted-foreground">
-                        <span>📍 {position.location}</span>
-                        <span>🏢 {position.department}</span>
-                        <span>⏰ {position.type}</span>
+                        <span>{position.location}</span>
+                        <span>{position.department}</span>
+                        <span>{position.type}</span>
                       </div>
                     </div>
                     <Button variant="hero" className="lg:w-auto w-full">
