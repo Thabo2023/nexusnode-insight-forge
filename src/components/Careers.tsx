@@ -2,47 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const Careers = () => {
-  const openPositions = [
-    {
-      title: "Senior Data Scientist",
-      department: "Analytics",
-      location: "Nigel, Gauteng",
-      type: "Full-time",
-      description: "Lead advanced analytics projects and mentor junior team members in machine learning and statistical modeling.",
-      requirements: [
-        "PhD or Master's in Data Science, Statistics, or related field",
-        "5+ years experience in data science",
-        "Strong Python/R programming skills",
-        "Experience with ML frameworks"
-      ]
-    },
-    {
-      title: "Market Research Analyst",
-      department: "Research",
-      location: "Nigel, Gauteng",
-      type: "Full-time",
-      description: "Conduct comprehensive market research and provide strategic insights to help clients understand market dynamics.",
-      requirements: [
-        "Bachelor's degree in Marketing, Economics, or Business",
-        "3+ years market research experience",
-        "Strong analytical and presentation skills",
-        "Experience with survey design and analysis"
-      ]
-    },
-    {
-      title: "Business Intelligence Developer",
-      department: "Technology",
-      location: "Nigel, Gauteng",
-      type: "Full-time",
-      description: "Design and develop BI solutions, dashboards, and reporting systems to deliver actionable insights.",
-      requirements: [
-        "Bachelor's degree in Computer Science or related field",
-        "Experience with BI tools (Power BI, Tableau)",
-        "SQL and database management skills",
-        "Knowledge of data warehousing concepts"
-      ]
-    }
-  ];
+  const openPositions = [];
 
   const benefits = [
     {
@@ -93,49 +53,13 @@ const Careers = () => {
         {/* Open Positions */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold mb-8 text-center">Open Positions</h3>
-          <div className="space-y-6">
-            {openPositions.map((position, index) => (
-              <Card 
-                key={position.title}
-                className="group hover:shadow-glow transition-all duration-500 border-border/50 bg-card/80 backdrop-blur-sm"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader>
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                    <div>
-                      <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                        {position.title}
-                      </CardTitle>
-                      <div className="flex flex-wrap gap-4 mt-2 text-sm text-muted-foreground">
-                        <span>{position.location}</span>
-                        <span>{position.department}</span>
-                        <span>{position.type}</span>
-                      </div>
-                    </div>
-                    <Button variant="hero" className="lg:w-auto w-full">
-                      Apply Now
-                    </Button>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground leading-relaxed">
-                    {position.description}
-                  </p>
-                  
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Requirements:</h4>
-                    <ul className="space-y-1">
-                      {position.requirements.map((req, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-muted-foreground">
-                          <span className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="text-center py-16">
+            <div className="bg-muted/30 rounded-2xl p-12 border border-border/50 max-w-2xl mx-auto">
+              <h4 className="text-2xl font-bold mb-4 text-muted-foreground">No Open Positions</h4>
+              <p className="text-muted-foreground">
+                We currently have no open positions available. Please check back later for future opportunities.
+              </p>
+            </div>
           </div>
         </div>
 

@@ -2,14 +2,10 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const Partners = () => {
   const partners = [
-    { name: "TechCorp Solutions", industry: "Technology", logo: "TC", color: "bg-gradient-primary" },
-    { name: "RetailMax", industry: "Retail", logo: "RM", color: "bg-gradient-accent" },
-    { name: "FinanceFirst", industry: "Financial Services", logo: "FF", color: "bg-gradient-tech" },
-    { name: "HealthcarePlus", industry: "Healthcare", logo: "HP", color: "bg-gradient-primary" },
-    { name: "ManufactureCore", industry: "Manufacturing", logo: "MC", color: "bg-gradient-accent" },
-    { name: "EduTech Institute", industry: "Education", logo: "EI", color: "bg-gradient-tech" },
-    { name: "DataFlow Systems", industry: "Technology", logo: "DS", color: "bg-gradient-primary" },
-    { name: "Analytics Pro", industry: "Consulting", logo: "AP", color: "bg-gradient-accent" }
+    { name: "Partner Company A", industry: "Technology", logo: "PA", color: "bg-gradient-primary" },
+    { name: "Partner Company B", industry: "Finance", logo: "PB", color: "bg-gradient-accent" },
+    { name: "Partner Company C", industry: "Healthcare", logo: "PC", color: "bg-gradient-tech" },
+    { name: "Partner Company D", industry: "Manufacturing", logo: "PD", color: "bg-gradient-primary" }
   ];
 
   return (

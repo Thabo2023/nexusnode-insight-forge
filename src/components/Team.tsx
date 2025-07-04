@@ -4,32 +4,32 @@ import { Button } from "@/components/ui/button";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Dr. Sarah Johnson",
-      role: "Chief Data Scientist",
-      linkedin: "https://linkedin.com/in/sarah-johnson-data",
-      bio: "Leading expert in machine learning and predictive analytics with 15+ years experience.",
-      initials: "SJ"
+      name: "Team Member A",
+      role: "Data Scientist",
+      linkedin: "#",
+      bio: "Experienced professional in data analysis and machine learning.",
+      initials: "TA"
     },
     {
-      name: "Michael Chen",
-      role: "Senior Market Research Analyst",
-      linkedin: "https://linkedin.com/in/michael-chen-market",
-      bio: "Specialized in consumer behavior analysis and market trend forecasting.",
-      initials: "MC"
+      name: "Team Member B", 
+      role: "Research Analyst",
+      linkedin: "#",
+      bio: "Specialist in market research and business intelligence.",
+      initials: "TB"
     },
     {
-      name: "Dr. Amanda Rodriguez",
-      role: "Statistical Modeling Lead",
-      linkedin: "https://linkedin.com/in/amanda-rodriguez-stats",
-      bio: "PhD in Statistics with expertise in advanced statistical modeling and data visualization.",
-      initials: "AR"
+      name: "Team Member C",
+      role: "Analytics Lead",
+      linkedin: "#", 
+      bio: "Expert in statistical modeling and data visualization.",
+      initials: "TC"
     },
     {
-      name: "David Kim",
-      role: "Business Intelligence Director",
-      linkedin: "https://linkedin.com/in/david-kim-bi",
-      bio: "Transforms complex data into strategic business insights for executive decision-making.",
-      initials: "DK"
+      name: "Team Member D",
+      role: "Business Analyst",
+      linkedin: "#",
+      bio: "Focused on translating data insights into business value.",
+      initials: "TD"
     }
   ];
 
