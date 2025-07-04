@@ -162,11 +162,11 @@ const ServiceRequest = () => {
                           className="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                         >
                           <option value="">Select budget range</option>
-                          <option value="under-10k">Under $10,000</option>
-                          <option value="10k-25k">$10,000 - $25,000</option>
-                          <option value="25k-50k">$25,000 - $50,000</option>
-                          <option value="50k-100k">$50,000 - $100,000</option>
-                          <option value="over-100k">Over $100,000</option>
+                          <option value="under-150k">Under R150,000</option>
+                          <option value="150k-400k">R150,000 - R400,000</option>
+                          <option value="400k-800k">R400,000 - R800,000</option>
+                          <option value="800k-1-5m">R800,000 - R1.5M</option>
+                          <option value="over-1-5m">Over R1.5M</option>
                         </select>
                       </div>
                       <div className="space-y-2">
