@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
       {/* Animated Background Grid */}
@@ -40,10 +41,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-              Start Your Analytics Journey
-            </Button>
-            
+            <Link to="/service-request">
+              <Button variant="hero" size="lg" className="text-lg px-8 py-4">
+                Start Your Analytics Journey
+              </Button>
+            </Link>
           </div>
 
           {/* Stats */}

@@ -1,98 +1,62 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 const Services = () => {
   const services = [
     {
       title: "Data Analysis",
-      description: "Transform raw data into actionable insights with our advanced analytics tools and methodologies. We help you uncover patterns, trends, and opportunities hidden in your data.",
-      features: [
-        "Statistical Analysis",
-        "Data Visualization",
-        "Pattern Recognition",
-        "Performance Metrics"
-      ],
-      icon: "analytics"
+      description: "Transform raw data into actionable insights",
+      icon: "chart"
     },
     {
-      title: "Market Research",
-      description: "Gain competitive advantage through comprehensive market analysis and consumer behavior insights. Our research methodologies provide deep understanding of market dynamics.",
-      features: [
-        "Market Sizing",
-        "Competitor Analysis",
-        "Consumer Insights",
-        "Trend Forecasting"
-      ],
+      title: "Market Research", 
+      description: "Comprehensive market analysis and insights",
       icon: "target"
     },
     {
       title: "Predictive Modeling",
-      description: "Leverage machine learning and AI to predict future trends and outcomes. Our models help you make proactive decisions and stay ahead of the competition.",
-      features: [
-        "Forecasting Models",
-        "Risk Assessment",
-        "Demand Planning",
-        "Scenario Analysis"
-      ],
-      icon: "prediction"
+      description: "AI-powered forecasting and trend analysis", 
+      icon: "brain"
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-muted/30 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 20% 80%, hsl(var(--primary)) 0%, transparent 50%),
-                           radial-gradient(circle at 80% 20%, hsl(var(--accent)) 0%, transparent 50%)`
-        }}></div>
+    <section id="services" className="py-32 bg-gradient-subtle relative overflow-hidden min-h-screen flex items-center">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-primary-glow/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
+
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-7xl font-bold mb-8 animate-fade-in">
             Our <span className="bg-gradient-tech bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We specialize in turning complex data into clear, actionable insights 
-            that drive business growth and innovation.
+          <p className="text-2xl text-muted-foreground max-w-2xl mx-auto animate-slide-up">
+            Precision-driven analytics for strategic growth
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card 
               key={service.title} 
-              className="group hover:shadow-glow transition-all duration-500 hover:scale-105 border-border/50 bg-card/80 backdrop-blur-sm"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="group hover:shadow-glow transition-all duration-700 hover:scale-110 border-0 bg-card/20 backdrop-blur-md hover:bg-card/40 animate-scale-in"
+              style={{ animationDelay: `${index * 0.3}s` }}
             >
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <div className="w-8 h-8 bg-primary-foreground rounded opacity-80"></div>
+              <CardHeader className="text-center pb-8">
+                <div className="w-24 h-24 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-glow">
+                  <div className="w-12 h-12 bg-primary-foreground rounded-lg opacity-90"></div>
                 </div>
-                <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-500">
                   {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="text-center">
+                <p className="text-lg text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-500">
                   {service.description}
                 </p>
-                
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-foreground">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-muted-foreground">
-                        <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <Button variant="premium" className="w-full group-hover:shadow-elegant">
-                  Explore Service
-                </Button>
               </CardContent>
             </Card>
           ))}
