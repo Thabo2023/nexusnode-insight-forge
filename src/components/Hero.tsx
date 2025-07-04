@@ -28,7 +28,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/b410b5d7-b6b7-484c-ba33-cf086ec5c70a.png" 
               alt="Nexusnode Logo" 
-              className="h-32 md:h-40 w-auto mx-auto object-scale-down"
+              className="h-48 md:h-64 lg:h-80 xl:h-96 w-auto mx-auto object-scale-down"
             />
           </div>
           
