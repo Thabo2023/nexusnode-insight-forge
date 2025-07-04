@@ -1,7 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Team = () => {
+  const navigate = useNavigate();
+  
   const teamMembers = [
     {
       name: "Team Member A",
@@ -101,7 +104,11 @@ const Team = () => {
               We're always looking for talented individuals who are passionate about 
               data analytics and want to make a real impact. Check out our open positions.
             </p>
-            <Button variant="hero" size="lg">
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => navigate('/careers')}
+            >
               View Open Positions
             </Button>
           </div>
