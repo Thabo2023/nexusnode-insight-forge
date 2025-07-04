@@ -3,13 +3,7 @@ const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-10">
-        <div className="w-full h-full animate-tech-grid" style={{
-        backgroundImage: `
-              linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
-            `,
-        backgroundSize: '50px 50px'
-      }} />
+        
       </div>
 
       {/* Floating Elements */}
@@ -25,11 +19,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Large Logo */}
           <div className="mb-8 animate-fade-in">
-            <img 
-              src="/lovable-uploads/b410b5d7-b6b7-484c-ba33-cf086ec5c70a.png" 
-              alt="Nexusnode Logo" 
-              className="h-48 md:h-64 lg:h-80 xl:h-96 w-auto mx-auto object-scale-down"
-            />
+            <img src="/lovable-uploads/b410b5d7-b6b7-484c-ba33-cf086ec5c70a.png" alt="Nexusnode Logo" className="h-48 md:h-64 lg:h-80 xl:h-96 w-auto mx-auto object-scale-down" />
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
@@ -53,24 +43,22 @@ const Hero = () => {
             <Button variant="hero" size="lg" className="text-lg px-8 py-4">
               Start Your Analytics Journey
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-              View Case Studies
-            </Button>
+            
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">2024</div>
-              <div className="text-muted-foreground">Founded</div>
+              
+              
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">100%</div>
-              <div className="text-muted-foreground">Data Accuracy</div>
+              
+              
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary-glow mb-2">∞</div>
-              <div className="text-muted-foreground">Possibilities</div>
+              
+              
             </div>
           </div>
         </div>
