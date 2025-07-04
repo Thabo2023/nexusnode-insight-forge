@@ -1,9 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -27,7 +25,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">073 936 8360</p>
+                    <p className="text-muted-foreground">+27 73 936 8360</p>
                   </div>
                 </div>
 
@@ -75,18 +73,8 @@ const Contact = () => {
 
             {/* Quick Contact Options */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold">Quick Actions</h4>
-              <div className="space-y-3">
-                <Button variant="outline" className="w-full justify-start" size="lg">
-                  Call Us Now
-                </Button>
-                <Button variant="outline" className="w-full justify-start" size="lg">
-                  Send Email
-                </Button>
-                <Button variant="outline" className="w-full justify-start" size="lg">
-                  Schedule Consultation
-                </Button>
-              </div>
+              
+              
             </div>
           </div>
 
@@ -102,21 +90,13 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       First Name *
                     </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="John"
-                    />
+                    <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="John" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Last Name *
                     </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="Doe"
-                    />
+                    <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Doe" />
                   </div>
                 </div>
 
@@ -124,22 +104,14 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Email Address *
                   </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="john.doe@example.com"
-                  />
+                  <input type="email" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="john.doe@example.com" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Company
                   </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                    placeholder="Your Company Name"
-                  />
+                  <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your Company Name" />
                 </div>
 
                 <div>
@@ -159,11 +131,7 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Message *
                   </label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-                    placeholder="Tell us about your project or requirements..."
-                  ></textarea>
+                  <textarea rows={4} className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none" placeholder="Tell us about your project or requirements..."></textarea>
                 </div>
 
                 <Button variant="hero" size="lg" className="w-full">
@@ -174,8 +142,6 @@ const Contact = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
