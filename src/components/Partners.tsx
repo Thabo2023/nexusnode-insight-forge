@@ -1,15 +1,47 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
 const Partners = () => {
-  const partners = [
-    { name: "Partner Company A", industry: "Technology", logo: "PA", color: "bg-gradient-primary" },
-    { name: "Partner Company B", industry: "Finance", logo: "PB", color: "bg-gradient-accent" },
-    { name: "Partner Company C", industry: "Healthcare", logo: "PC", color: "bg-gradient-tech" },
-    { name: "Partner Company D", industry: "Manufacturing", logo: "PD", color: "bg-gradient-primary" }
-  ];
-
-  return (
-    <section id="partners" className="py-20 bg-background">
+  const partners = [{
+    name: "TechCorp Solutions",
+    industry: "Technology",
+    logo: "TC",
+    color: "bg-gradient-primary"
+  }, {
+    name: "RetailMax",
+    industry: "Retail",
+    logo: "RM",
+    color: "bg-gradient-accent"
+  }, {
+    name: "FinanceFirst",
+    industry: "Financial Services",
+    logo: "FF",
+    color: "bg-gradient-tech"
+  }, {
+    name: "HealthcarePlus",
+    industry: "Healthcare",
+    logo: "HP",
+    color: "bg-gradient-primary"
+  }, {
+    name: "ManufactureCore",
+    industry: "Manufacturing",
+    logo: "MC",
+    color: "bg-gradient-accent"
+  }, {
+    name: "EduTech Institute",
+    industry: "Education",
+    logo: "EI",
+    color: "bg-gradient-tech"
+  }, {
+    name: "DataFlow Systems",
+    industry: "Technology",
+    logo: "DS",
+    color: "bg-gradient-primary"
+  }, {
+    name: "Analytics Pro",
+    industry: "Consulting",
+    logo: "AP",
+    color: "bg-gradient-accent"
+  }];
+  return <section id="partners" className="py-20 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -21,10 +53,12 @@ const Partners = () => {
           </p>
         </div>
 
-        <Carousel className="w-full max-w-6xl mx-auto" opts={{ align: "start", loop: true }}>
+        <Carousel className="w-full max-w-6xl mx-auto" opts={{
+        align: "start",
+        loop: true
+      }}>
           <CarouselContent className="-ml-4">
-            {partners.map((partner, index) => (
-              <CarouselItem key={partner.name} className="pl-4 md:basis-1/3 lg:basis-1/4">
+            {partners.map((partner, index) => <CarouselItem key={partner.name} className="pl-4 md:basis-1/3 lg:basis-1/4">
                 <div className="group text-center space-y-4 animate-fade-in p-6 bg-card rounded-xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-tech hover:scale-105">
                   <div className="aspect-square bg-gradient-subtle rounded-xl flex items-center justify-center border border-border/30 group-hover:border-primary/40 transition-all duration-300">
                     <div className={`w-16 h-16 ${partner.color} rounded-full flex items-center justify-center shadow-lg`}>
@@ -42,8 +76,7 @@ const Partners = () => {
                     </p>
                   </div>
                 </div>
-              </CarouselItem>
-            ))}
+              </CarouselItem>)}
           </CarouselContent>
           <CarouselPrevious className="left-4" />
           <CarouselNext className="right-4" />
@@ -56,9 +89,7 @@ const Partners = () => {
               <div className="w-8 h-8 border-2 border-primary-foreground rounded-sm"></div>
             </div>
             <h3 className="text-xl font-semibold">Strategic Collaboration</h3>
-            <p className="text-muted-foreground">
-              Deep partnerships that go beyond traditional vendor relationships.
-            </p>
+            
           </div>
           <div className="text-center space-y-4 group">
             <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -67,9 +98,7 @@ const Partners = () => {
               </div>
             </div>
             <h3 className="text-xl font-semibold">Innovation Focus</h3>
-            <p className="text-muted-foreground">
-              Collaborative innovation to solve complex business challenges.
-            </p>
+            
           </div>
           <div className="text-center space-y-4 group">
             <div className="w-16 h-16 bg-gradient-tech rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -84,8 +113,6 @@ const Partners = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Partners;
