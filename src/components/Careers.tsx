@@ -63,29 +63,6 @@ const Careers = () => {
           </div>
         </div>
 
-        {/* Benefits */}
-        <div>
-          <h3 className="text-2xl font-bold mb-8 text-center">Why Work With Us?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={benefit.title}
-                className="text-center space-y-4 p-6 rounded-lg bg-card/50 border border-border/50 hover:shadow-tech transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-4xl mb-4">
-                  {benefit.icon}
-                </div>
-                <h4 className="text-lg font-semibold text-foreground">
-                  {benefit.title}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Contact for opportunities */}
         <div className="mt-16 text-center">

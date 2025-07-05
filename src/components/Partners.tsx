@@ -82,36 +82,6 @@ const Partners = () => {
           <CarouselNext className="right-4" />
         </Carousel>
 
-        {/* Partnership Benefits */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center space-y-4 group">
-            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-              <div className="w-8 h-8 border-2 border-primary-foreground rounded-sm"></div>
-            </div>
-            <h3 className="text-xl font-semibold">Strategic Collaboration</h3>
-            
-          </div>
-          <div className="text-center space-y-4 group">
-            <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-              <div className="w-8 h-8 bg-accent-foreground rounded-full relative">
-                <div className="absolute inset-2 bg-accent rounded-full"></div>
-              </div>
-            </div>
-            <h3 className="text-xl font-semibold">Innovation Focus</h3>
-            
-          </div>
-          <div className="text-center space-y-4 group">
-            <div className="w-16 h-16 bg-gradient-tech rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-              <div className="w-8 h-2 bg-primary-foreground transform rotate-12 relative">
-                <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-primary-foreground transform rotate-45"></div>
-              </div>
-            </div>
-            <h3 className="text-xl font-semibold">Mutual Growth</h3>
-            <p className="text-muted-foreground">
-              Partnerships that drive growth and success for all stakeholders.
-            </p>
-          </div>
-        </div>
       </div>
     </section>;
 };

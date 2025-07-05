@@ -1,9 +1,7 @@
 const Footer = () => {
   const footerLinks = {
-    Services: ["Data Analysis", "Market Research", "Predictive Modeling", "Business Intelligence"],
-    Company: ["About Us", "Our Team", "Careers", "News & Updates"],
-    Resources: ["Case Studies", "White Papers", "Blog", "Documentation"],
-    Support: ["Contact Us", "Help Center", "Privacy Policy", "Terms of Service"]
+    Company: ["Our Team", "Careers", "News & Updates"],
+    Support: ["Contact Us", "Privacy Policy", "Terms of Service"]
   };
   return <footer className="bg-muted/50 border-t border-border">
       <div className="container mx-auto px-6 lg:px-8 py-16">
@@ -13,14 +11,9 @@ const Footer = () => {
             <h3 className="text-2xl font-bold bg-gradient-tech bg-clip-text text-transparent mb-4">
               Nexusnode
             </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Transforming raw data into strategic insights through advanced analytics, 
-              market research, and predictive modeling. Empowering businesses to make 
-              data-driven decisions since 2024.
-            </p>
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
-                <span>Bresler Street, Nigel, Gauteng</span>
+                <span>Johannesburg, Gauteng, South Africa</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span>073 936 8360</span>
@@ -32,16 +25,46 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          {Object.entries(footerLinks).map(([category, links]) => <div key={category}>
-              <h4 className="font-semibold text-foreground mb-4">{category}</h4>
-              <ul className="space-y-2">
-                {links.map(link => <li key={link}>
-                    <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm">
-                      {link}
-                    </a>
-                  </li>)}
-              </ul>
-            </div>)}
+          <div>
+            <h4 className="font-semibold text-foreground mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="/team" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm">
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a href="/careers" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="/news" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm">
+                  News & Updates
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold text-foreground mb-4">Support</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="/contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm">
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm">
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Section */}

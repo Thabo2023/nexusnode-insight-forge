@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Large Logo */}
           <div className="mb-8 animate-fade-in">
-            <img src="/lovable-uploads/b410b5d7-b6b7-484c-ba33-cf086ec5c70a.png" alt="Nexusnode Logo" className="h-48 md:h-64 lg:h-80 xl:h-96 w-auto mx-auto object-scale-down" />
+            <img src="/lovable-uploads/b410b5d7-b6b7-484c-ba33-cf086ec5c70a.png" alt="Nexusnode Logo" className="h-32 sm:h-48 md:h-64 lg:h-80 xl:h-96 w-auto mx-auto object-scale-down" />
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">

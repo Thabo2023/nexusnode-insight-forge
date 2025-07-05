@@ -36,9 +36,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">Address</h4>
                     <p className="text-muted-foreground">
-                      Bresler Street<br />
-                      Nigel, Gauteng<br />
-                      South Africa
+                      Johannesburg, Gauteng, South Africa
                     </p>
                   </div>
                 </div>
@@ -90,13 +88,13 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       First Name *
                     </label>
-                    <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="John" />
+                    <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Thabo" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Last Name *
                     </label>
-                    <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Doe" />
+                    <input type="text" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Mthembu" />
                   </div>
                 </div>
 
@@ -104,7 +102,7 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Email Address *
                   </label>
-                  <input type="email" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="john.doe@example.com" />
+                  <input type="email" className="w-full px-4 py-2 rounded-md border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary" placeholder="thabo.mthembu@example.com" />
                 </div>
 
                 <div>
