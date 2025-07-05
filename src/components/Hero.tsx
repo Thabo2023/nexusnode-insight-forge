@@ -34,11 +34,7 @@ const Hero = () => {
             </span>
           </h2>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-slide-up max-w-2xl mx-auto" style={{
-          animationDelay: '0.4s'
-        }}>
-            Transform raw data into strategic insights with precision-driven analytics.
-          </p>
+          
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
             <Link to="/service-request">
