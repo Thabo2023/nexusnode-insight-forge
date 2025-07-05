@@ -42,9 +42,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default">
-              Get Started
-            </Button>
+            
           </div>
 
           {/* Mobile menu button */}
