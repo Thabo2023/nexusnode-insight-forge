@@ -16,7 +16,7 @@ const Footer = () => {
                 <span>Johannesburg, Gauteng, South Africa</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span>073 936 8360</span>
+                <span>+27 73 936 8360</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span>info@nexusnode.co.za</span>
