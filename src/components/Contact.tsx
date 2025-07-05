@@ -1,6 +1,30 @@
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/hooks/use-toast";
 const Contact = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const checkBusinessHours = () => {
+      const now = new Date();
+      const currentHour = now.getHours();
+      const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+      
+      // Business hours: Monday-Friday 8AM-5PM (South African timezone)
+      const isWeekday = currentDay >= 1 && currentDay <= 5;
+      const isBusinessHour = currentHour >= 8 && currentHour < 17;
+      
+      setIsOpen(isWeekday && isBusinessHour);
+    };
+
+    checkBusinessHours();
+    const interval = setInterval(checkBusinessHours, 60000); // Check every minute
+
+    return () => clearInterval(interval);
+  }, []);
   return <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -30,18 +54,6 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0">
-                    <div className="w-6 h-6 border-2 border-white transform rotate-45"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Address</h4>
-                    <p className="text-muted-foreground">
-                      Johannesburg, Gauteng, South Africa
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-tech rounded-full flex items-center justify-center flex-shrink-0">
                     <div className="w-6 h-4 border-2 border-white rounded-sm"></div>
                   </div>
@@ -51,19 +63,37 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <div className="w-6 h-6 border-2 border-white rounded-full relative">
-                      <div className="absolute top-1 left-1/2 w-0.5 h-2 bg-white transform -translate-x-1/2"></div>
-                    </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Address</h4>
+                    <p className="text-muted-foreground">Johannesburg, Gauteng, South Africa</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Business Hours</h4>
-                    <p className="text-muted-foreground">
-                      Monday - Friday: 8:00 AM - 6:00 PM<br />
-                      Saturday: 9:00 AM - 2:00 PM<br />
-                      Sunday: Closed
-                    </p>
+                    <div className="flex items-center space-x-2">
+                      <p className="text-muted-foreground">Mon-Fri 8AM-5PM</p>
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        isOpen 
+                          ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' 
+                          : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
+                      }`}>
+                        {isOpen ? 'Open' : 'Closed'}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

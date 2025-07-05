@@ -7,32 +7,25 @@ const Team = () => {
   
   const teamMembers = [
     {
-      name: "Team Member A",
-      role: "Data Scientist",
-      linkedin: "#",
-      bio: "Experienced professional in data analysis and machine learning.",
-      initials: "TA"
+      name: "Vince Mbanze",
+      role: "Founder",
+      linkedin: "https://www.linkedin.com/in/vince-mbanze-0a7722158/",
+      bio: "Visionary leader driving data-driven innovation and strategic growth.",
+      initials: "VM"
     },
     {
-      name: "Team Member B", 
-      role: "Research Analyst",
-      linkedin: "#",
-      bio: "Specialist in market research and business intelligence.",
-      initials: "TB"
+      name: "Thabo Pilusa", 
+      role: "Director",
+      linkedin: "https://www.linkedin.com/in/thabo-pilusa-6a757623a/",
+      bio: "Strategic director focused on business development and client relations.",
+      initials: "TP"
     },
     {
-      name: "Team Member C",
-      role: "Analytics Lead",
-      linkedin: "#", 
-      bio: "Expert in statistical modeling and data visualization.",
-      initials: "TC"
-    },
-    {
-      name: "Team Member D",
-      role: "Business Analyst",
-      linkedin: "#",
-      bio: "Focused on translating data insights into business value.",
-      initials: "TD"
+      name: "Ofentse Pholosi",
+      role: "Director",
+      linkedin: "https://www.linkedin.com/in/ofentse-pholosi/", 
+      bio: "Operations director specializing in analytics and business intelligence.",
+      initials: "OP"
     }
   ];
 
