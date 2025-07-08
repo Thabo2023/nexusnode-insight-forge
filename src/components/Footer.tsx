@@ -3,7 +3,14 @@ const Footer = () => {
     Company: ["Our Team", "Careers", "News & Updates"],
     Support: ["Contact Us", "Privacy Policy", "Terms of Service"]
   };
-  return <footer className="bg-muted/50 border-t border-border">
+  return <footer className="relative bg-muted/50 border-t border-border overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 opacity-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/lovable-uploads/205f0953-f08b-4328-86da-4e2d6636abe5.png')"
+        }}
+      />
       <div className="container mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
