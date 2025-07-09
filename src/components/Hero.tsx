@@ -16,7 +16,7 @@ const Hero = () => {
       animationDelay: '2s'
     }} />
 
-      {/* Background Video */}
+      {/* Background Video with Fallback */}
       <div className="absolute inset-0 overflow-hidden">
         <video 
           className="w-full h-full object-cover"
@@ -24,10 +24,15 @@ const Hero = () => {
           muted 
           loop
           playsInline
+          onError={() => console.log("Video failed to load")}
+          onLoadStart={() => console.log("Video started loading")}
+          onCanPlay={() => console.log("Video can play")}
         >
           <source src="/placeholder-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        {/* Fallback background when video doesn't load */}
+        <div className="absolute inset-0 bg-gradient-tech opacity-80"></div>
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
