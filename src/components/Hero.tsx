@@ -16,28 +16,25 @@ const Hero = () => {
       animationDelay: '2s'
     }} />
 
+      {/* Background Video */}
+      <div className="absolute inset-0 overflow-hidden">
+        <video 
+          className="w-full h-full object-cover"
+          autoPlay 
+          muted 
+          loop
+          playsInline
+        >
+          <source src="/placeholder-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+
       <div className="container mx-auto px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Hero Video */}
-          <div className="mb-8 animate-fade-in">
-            <video 
-              className="w-full max-w-4xl mx-auto rounded-lg shadow-elegant"
-              autoPlay 
-              muted 
-              loop
-              playsInline
-            >
-              <source src="/placeholder-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up">
-            Transform{" "}
-            <span className="bg-gradient-tech bg-clip-text text-transparent">
-              Data
-            </span>{" "}
-            Into{" "}
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-slide-up text-white">
+            Transform Data Into{" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
               Strategic Insights
             </span>
